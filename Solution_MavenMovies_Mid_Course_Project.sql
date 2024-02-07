@@ -3,8 +3,8 @@ including their first and last names, email address,
 and the store identification number where they work. */
 
 SELECT
-		first_name,
-    last_name,
+	first_name,
+	last_name,
     email,
     store_id
 FROM staff;
@@ -22,7 +22,7 @@ GROUP BY store_id;
 each  of your stores. Separately, please. */
 
 SELECT
-		store_id,
+	store_id,
     COUNT(active) active_customers
 FROM customer
 WHERE active = 1
@@ -44,7 +44,7 @@ and then provide a count of the unique categories of
 films you provide */
 
 SELECT
-		store_id,
+	store_id,
     COUNT(DISTINCT film_id) AS unique_films
 FROM inventory
 GROUP BY
@@ -63,7 +63,7 @@ average of all films you carry. */
 SELECT
     MIN(replacement_cost) AS least_expensive,
     MAX(replacement_cost) AS most_expensive,
-		AVG(replacement_cost) AS average_replacement_cost
+	AVG(replacement_cost) AS average_replacement_cost
 FROM film;
 
 /* Question #7: We are interested in having you put
@@ -74,7 +74,7 @@ the average payment you process, as well as the maximum
 payment you have processed. */
 
 SELECT
-		AVG(amount) AS average_payment,
+	AVG(amount) AS average_payment,
     MAX(amount) AS maximum_payment
 FROM payment;
 
